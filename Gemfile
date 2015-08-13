@@ -15,6 +15,7 @@ gem 'geocoder'
 gem 'rails_admin'
 gem 'devise'
 gem 'gravatarify', '~> 3.0.0'
+gem 'public_activity'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

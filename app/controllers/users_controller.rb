@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     case params[:people] when "friends"
       @users = current_user.active_friends
     when "requests"
-      @users = current_user.pending_friend_request_from.map(&:users)
+      @users = current_user.pending_friend_request_from.map(&:user)
     when "pending"
       @users = current_user.pending_friend_request_to.map(&:friend)
     else
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
 
   def show
+    @activities = PublicActivity::Activity.where(owner_id: @user.id) + PublicActivity::Activity.where(recipient_id: @user.id)
   end
 
   private
