@@ -16,6 +16,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'gravatarify', '~> 3.0.0'
 gem 'public_activity'
+gem 'auto_html'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
